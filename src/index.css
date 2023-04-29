@@ -21,6 +21,8 @@ body {
 
 .fw {
   width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .sw {
   max-width: 1280px;
