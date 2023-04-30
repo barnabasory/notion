@@ -560,10 +560,10 @@
 @media screen and (max-width: 1076px) {
   .navbar-wrapper {
     display: flex;
-    height: 50px;
+    height: 55px;
     position: fixed;
     background-color: white;
-    z-index: 1;
+    z-index: 999;
     width: 100%;
   }
 
@@ -573,18 +573,18 @@
     justify-content: space-between;
     width: 100%;
     position: fixed;
-    top: 10px;
-    padding-bottom: 10px;
-    z-index: 2;
-    background-color: white;
+    height: 55px;
+    padding-bottom: 15px;
+    z-index: 999;
 
     .navlinksA {
-      display: flex;
+      display: none;
       font-weight: 900;
       font-size: 13px;
       width: 100%;
+
       .logo {
-        width: 80px;
+        width: 95px;
         height: 100%;
         cursor: pointer;
       }
@@ -601,32 +601,99 @@
       font-weight: bold;
       font-size: 13px;
       width: 100%;
+
+      .cta {
+        display: none;
+      }
+
+      .cta-button {
+        display: none;
+      }
     }
 
-    .open-menu-icon,
-    .close-menu-icon {
-      width: 22px;
-      cursor: pointer;
-      margin-right: 30px;
+    .open-close-menu-container {
+      padding-left: 20px;
+      padding-right: 10px;
+      .open-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        .open-menu-open {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+
+          .menu-logo {
+            width: 90px;
+          }
+
+          .open-menu-hamburger {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            .get-notion-free-btn {
+              border-radius: 5px;
+              background-color: #050505;
+              padding: 7px;
+              padding-left: 12px;
+              padding-right: 12px;
+              font-weight: bold;
+              font-size: 13px;
+            }
+            .dn {
+              display: none;
+            }
+
+            .open-menu-icon,
+            .close-menu-icon {
+              width: 27px;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .open-menu-times {
+          display: flex;
+          align-items: center;
+
+          .menu-logo-times {
+            display: none;
+          }
+          .close-menu {
+            .close-menu-icon {
+              width: 27px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
     }
   }
 
   .responsive-dropdown {
     position: absolute;
-    left: 15px;
-    top: 60px;
+    display: flex;
+    justify-content: center;
+    top: 55px;
     background-color: white;
-    margin-left: -10px;
-    padding-left: 10px;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
 
     .responsive-links {
       display: flex;
       flex-direction: column;
+      width: 100%;
 
       .products-link {
         display: flex;
         flex-direction: column;
         gap: 5px;
+        width: 100%;
+        padding-left: 20px;
 
         .products-links-title {
           display: flex;
@@ -634,18 +701,21 @@
           justify-content: space-between;
           font-size: 14px;
           font-weight: 900;
-          width: 100vi;
+          width: 100%;
           cursor: pointer;
           user-select: none;
           border: 1px solid rgba($color: #000000, $alpha: 0.15);
           border-bottom: none;
           border-left: none;
+          border-top: none;
+          border-right: none;
           padding-top: 20px;
           padding-bottom: 20px;
 
-          img {
+          .caret {
+            position: absolute;
+            right: 10px;
             width: 11px;
-            margin-right: 25px;
             transform: rotate(270deg);
           }
         }
@@ -665,7 +735,7 @@
               align-items: center;
               gap: 5px;
 
-              img {
+              .key-link-img {
                 width: 22px;
               }
               .title {
@@ -691,25 +761,28 @@
       .solutions-link {
         display: flex;
         flex-direction: column;
-        gap: 0px;
+        width: 100%;
+        padding-left: 20px;
         .solutions-links-title {
           display: flex;
           align-items: center;
           justify-content: space-between;
           font-size: 14px;
           font-weight: 900;
-          width: 100vi;
+          width: 100%;
           cursor: pointer;
           user-select: none;
           border: 1px solid rgba($color: #000000, $alpha: 0.15);
           border-bottom: none;
           border-left: none;
+          border-right: none;
           padding-top: 20px;
           padding-bottom: 20px;
 
-          img {
+          .caret {
+            position: absolute;
+            right: 10px;
             width: 11px;
-            margin-right: 25px;
             transform: rotate(270deg);
           }
         }
@@ -745,25 +818,28 @@
       .resources-link {
         display: flex;
         flex-direction: column;
-        gap: 0px;
+        width: 100%;
+        padding-left: 20px;
         .resources-links-title {
           display: flex;
           align-items: center;
           justify-content: space-between;
           font-size: 14px;
           font-weight: 900;
-          width: 100vi;
+          width: 100%;
           cursor: pointer;
           user-select: none;
           border: 1px solid rgba($color: #000000, $alpha: 0.15);
           border-bottom: none;
           border-left: none;
+          border-right: none;
           padding-top: 20px;
           padding-bottom: 20px;
 
-          img {
+          .caret {
+            position: absolute;
+            right: 10px;
             width: 11px;
-            margin-right: 25px;
             transform: rotate(270deg);
           }
         }
@@ -781,25 +857,28 @@
       .downloads-link {
         display: flex;
         flex-direction: column;
-        gap: 0px;
+        width: 100%;
+        padding-left: 20px;
         .downloads-links-title {
           display: flex;
           align-items: center;
           justify-content: space-between;
           font-size: 14px;
           font-weight: 900;
-          width: 100vi;
+          width: 100%;
           cursor: pointer;
           user-select: none;
           border: 1px solid rgba($color: #000000, $alpha: 0.15);
           border-left: none;
+          border-right: none;
           border-bottom: none;
           padding-top: 20px;
           padding-bottom: 20px;
 
-          img {
+          .caret {
+            position: absolute;
+            right: 10px;
             width: 11px;
-            margin-right: 25px;
             transform: rotate(270deg);
           }
         }
@@ -815,23 +894,28 @@
         }
       }
       .pricing-link {
+        width: 100%;
+        padding-left: 20px;
         .pricing-links-title {
           display: flex;
           align-items: center;
           justify-content: space-between;
           font-size: 14px;
           font-weight: 900;
-          width: 100vi;
+          width: 100%;
           cursor: pointer;
           user-select: none;
           border: 1px solid rgba($color: #000000, $alpha: 0.15);
           border-left: none;
           border-bottom: none;
+          border-right: none;
           padding-top: 20px;
           padding-bottom: 20px;
         }
       }
       .request-demo-link {
+        width: 100%;
+        padding-left: 20px;
         .request-demo-links-title {
           display: flex;
           align-items: center;
@@ -843,12 +927,16 @@
           user-select: none;
           border: 1px solid rgba($color: #000000, $alpha: 0.15);
           border-left: none;
+          border-right: none;
           padding-top: 20px;
           padding-bottom: 20px;
         }
       }
 
       .get-notion-free-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding: 13px;
         padding-top: 10px;
         padding-bottom: 10px;
@@ -859,6 +947,8 @@
         margin-right: 30px;
         font-size: 15px;
         cursor: pointer;
+        margin-left: 20px;
+        margin-right: 20px;
 
         &:hover {
           opacity: 0.85;
@@ -866,6 +956,9 @@
       }
 
       .log-in-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border-radius: 4px;
         font-weight: 500;
         margin-right: 30px;
@@ -878,6 +971,8 @@
         border: 1px solid rgba($color: #000000, $alpha: 0.3);
         color: black;
         cursor: pointer;
+        margin-left: 20px;
+        margin-right: 20px;
         &:hover {
           background-color: rgba($color: #000000, $alpha: 0.03);
         }
@@ -894,6 +989,7 @@
     height: 50px;
     width: 100%;
     position: fixed;
+    z-index: 999;
   }
   .navbar {
     display: flex;
@@ -903,6 +999,8 @@
     top: 0;
     background-color: white;
     width: 100%;
+    z-index: 999;
+    padding-left: 20px;
 
     .navlinksA {
       display: flex;
@@ -911,11 +1009,10 @@
       font-size: 13px;
       width: 100%;
 
-      ul {
+      .navlinksA-list {
         display: flex;
         align-items: center;
 
-        li,
         .product,
         .download,
         .solutions,
@@ -977,7 +1074,7 @@
                 &:hover {
                   background-color: rgba($color: #000000, $alpha: 0.03);
                 }
-                img {
+                .left-link-img {
                   width: 20px;
                 }
 
@@ -1255,11 +1352,11 @@
       font-size: 15px;
       margin-right: 40px;
 
-      a {
+      .cta {
         cursor: pointer;
       }
 
-      button {
+      .cta-button {
         border-radius: 5px;
         background-color: #050505;
         padding: 6px;
@@ -1269,8 +1366,7 @@
       }
     }
 
-    .open-menu,
-    .close-menu {
+    .open-close-menu-container {
       display: none;
     }
   }

@@ -14,10 +14,12 @@ import {
   house3,
 } from "../../../pages";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { DataContext } from "../../../Context";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [showMenu, setShowMenu] = useState(false);
+  const { showMenu, setShowMenu } = useContext(DataContext);
   const [showDropdown1, setShowDropdown1] = useState(false);
   const [showDropdown2, setShowDropdown2] = useState(false);
   const [showDropdown3, setShowDropdown3] = useState(false);
@@ -53,35 +55,35 @@ const Navbar = () => {
             className="logo"
             onClick={() => setShowMenu(!showMenu)}
           />
-          <ul>
+          <ul className="navlinksA-list">
             <li className="product">
               <span className="link-name">Product</span>{" "}
               <img src={nav_caret} alt="nav-caret" className="caret" />
               <div className="product-drop-down">
                 <div className="left">
                   <a href="#" className="left-link">
-                    <img src={book} alt="book" />
+                    <img src={book} alt="book" className="left-link-img" />
                     <div className="link-content">
                       <span className="title">Wikis</span>
                       <span className="content">Centralize your knowledge</span>
                     </div>
                   </a>
                   <a href="#" className="left-link">
-                    <img src={dart} alt="book" />
+                    <img src={dart} alt="book" className="left-link-img" />
                     <div className="link-content">
                       <span className="title">Projects</span>
                       <span className="content">For every team or size</span>
                     </div>
                   </a>
                   <a href="#" className="left-link">
-                    <img src={doc} alt="book" />
+                    <img src={doc} alt="book" className="left-link-img" />
                     <div className="link-content">
                       <span className="title">Docs</span>
                       <span className="content">Simple and Powerful</span>
                     </div>
                   </a>
                   <a href="#" className="left-link">
-                    <img src={star} alt="book" />
+                    <img src={star} alt="book" className="left-link-img" />
                     <div className="link-content">
                       <span className="title">Notion AI</span>
                       <span className="content">Integrated AI Assistant</span>
@@ -227,27 +229,57 @@ const Navbar = () => {
           <a className="cta">Request a demo</a>
           <a className="cta">Log in</a>
           <a>
-            <button>Get Notion free</button>
+            <button className="cta-button">Get Notion free</button>
           </a>
         </div>
 
         {/* responsive */}
-        {!showMenu && (
+        <div className="fw open-close-menu-container">
           <div className="open-menu" onClick={() => setShowMenu(!showMenu)}>
-            <img src={menu} alt="open-menu" className="open-menu-icon" />
-          </div>
-        )}
-        {showMenu && (
-          <>
-            {" "}
-            <div className="close-menu" onClick={() => setShowMenu(!showMenu)}>
-              <img src={close} alt="close-menu" className="close-menu-icon" />
+            <div className="open-menu-open">
+              <img
+                src={logo}
+                alt="logo"
+                className="menu-logo"
+                onClick={() => setShowMenu(!showMenu)}
+              />
+              {!showMenu ? (
+                <div className="open-menu-hamburger">
+                  <a>
+                    <button className={scrolled ? "get-notion-free-btn" : "dn"}>
+                      Get Notion free
+                    </button>
+                  </a>
+                  <img src={menu} alt="open-menu" className="open-menu-icon" />
+                </div>
+              ) : (
+                <div className="open-menu-times">
+                  <img
+                    src={logo}
+                    alt="logo"
+                    className="menu-logo-times"
+                    onClick={() => setShowMenu(!showMenu)}
+                  />
+                  <div
+                    className="close-menu"
+                    onClick={() => setShowMenu(!showMenu)}
+                  >
+                    <img
+                      src={close}
+                      alt="close-menu"
+                      className="close-menu-icon"
+                    />
+                  </div>
+                </div>
+              )}
             </div>
-          </>
-        )}
+          </div>
+        </div>
       </nav>
+
+      {showMenu && <div className="responsive-dropdown-wrapper"></div>}
       {showMenu && (
-        <div className="responsive-dropdown">
+        <div className="fw responsive-dropdown">
           <div className="responsive-links">
             <div className="products-link">
               {
@@ -307,19 +339,19 @@ const Navbar = () => {
                 <div className="key-sub-links">
                   <div className="key-links">
                     <a href="#" className="key-link">
-                      <img src={book} alt="book" />
+                      <img src={book} alt="book" className="key-link-img" />
                       <span className="title">Wikis</span>
                     </a>
                     <a href="#" className="key-link">
-                      <img src={dart} alt="book" />
+                      <img src={dart} alt="dart" className="key-link-img" />
                       <span className="title">Projects</span>
                     </a>
                     <a href="#" className="key-link">
-                      <img src={doc} alt="book" />
+                      <img src={doc} alt="doc" className="key-link-img" />
                       <span className="title">Docs</span>
                     </a>
                     <a href="#" className="key-link">
-                      <img src={star} alt="book" />
+                      <img src={star} alt="star" className="key-link-img" />
                       <span className="title">Notion AI</span>
                     </a>
                   </div>

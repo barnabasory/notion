@@ -12,21 +12,23 @@
     max-width: 800px;
     line-height: 60px;
   }
-  img {
+  .hero-book-image,
+  .hero-doc-image,
+  .hero-dart-image {
     width: 60px;
     object-fit: cover;
     padding-left: 10px;
     padding-right: 10px;
   }
 
-  h4 {
+  .hero-desc {
     font-size: 25px;
     font-weight: normal;
     margin-top: -60px;
     max-width: 600px;
   }
 
-  button {
+  .hero-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,12 +48,28 @@
   }
 
   .hero-images {
+    position: relative;
     margin-top: 50px;
     .hero1 {
       width: 60%;
     }
     .hero2 {
       width: 80%;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+        rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    }
+
+    .sidekick {
+      position: absolute;
+      max-width: 18%;
+      max-height: 55%;
+      right: 10%;
+      border: 8px solid black;
+      border-top: 30px solid black;
+      border-radius: 25px;
+      bottom: 0%;
+      object-fit: cover;
+      right: 6%;
     }
   }
 }
@@ -73,24 +91,26 @@
       line-height: 60px;
     }
 
-    img {
+    .hero-book-image,
+    .hero-doc-image,
+    .hero-dart-image {
       width: 40px;
       object-fit: cover;
       padding-left: 10px;
       padding-right: 10px;
     }
-    .dart {
+    .hero-dart-image {
       margin-left: -10px;
     }
 
-    h4 {
+    .hero-desc {
       font-size: 21px;
       font-weight: normal;
       margin-top: -40px;
       max-width: 600px;
     }
 
-    button {
+    .hero-btn {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -112,10 +132,13 @@
     .hero-images {
       margin-top: 50px;
       .hero1 {
-        width: 70%;
+        width: 100%;
       }
       .hero2 {
-        width: 90%;
+        width: 100%;
+      }
+      .sidekick {
+        display: none;
       }
     }
   }
@@ -138,24 +161,26 @@
       line-height: 70px;
     }
 
-    img {
+    .hero-book-image,
+    .hero-doc-image,
+    .hero-dart-image {
       width: 40px;
       object-fit: cover;
       padding-left: 10px;
       padding-right: 10px;
     }
-    .dart {
+    .hero-dart-image {
       margin-left: -10px;
     }
 
-    h4 {
+    .hero-desc {
       font-size: 25px;
       font-weight: normal;
       margin-top: -40px;
       max-width: 600px;
     }
 
-    button {
+    .hero-btn {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -177,10 +202,22 @@
     .hero-images {
       margin-top: 50px;
       .hero1 {
-        width: 70%;
+        width: 100%;
       }
       .hero2 {
-        width: 90%;
+        width: 100%;
+      }
+      .sidekick {
+        position: absolute;
+        max-width: 18%;
+        max-height: 55%;
+        right: 0%;
+        border: 8px solid black;
+        border-top: 30px solid black;
+        border-radius: 25px;
+        bottom: 0%;
+        object-fit: cover;
+        right: 6%;
       }
     }
   }
@@ -203,24 +240,26 @@
       line-height: 80px;
     }
 
-    img {
+    .hero-book-image,
+    .hero-doc-image,
+    .hero-dart-image {
       width: 50px;
       object-fit: cover;
       padding-left: 10px;
       padding-right: 10px;
     }
-    .dart {
+    .hero-dart-image {
       margin-left: -10px;
     }
 
-    h4 {
+    .hero-desc {
       font-size: 25px;
       font-weight: normal;
       margin-top: -40px;
       max-width: 600px;
     }
 
-    button {
+    .hero-btn {
       display: flex;
       align-items: center;
       justify-content: center;

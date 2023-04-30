@@ -1,0 +1,133 @@
+.brands {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 70px;
+  max-width: 900px;
+  gap: 40px;
+
+  .brand-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 700px;
+
+    .brand-title {
+      font-size: 45px;
+      text-align: center;
+      margin-bottom: -15px;
+    }
+
+    .brand-desc {
+      text-align: center;
+      font-size: 18px;
+      font-weight: normal;
+      max-width: 600px;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      color: rgba($color: #03249d, $alpha: 0.7);
+      margin-top: -10px;
+
+      .arrow-right {
+        width: 18px;
+        color: rgba($color: #03249d, $alpha: 1);
+      }
+
+      &:hover {
+        text-decoration: underline;
+        color: rgba($color: #03249d, $alpha: 1);
+      }
+    }
+  }
+
+  .images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 890px;
+
+    .airbnb,
+    .figma {
+      max-width: 87px;
+      max-height: 55px;
+      height: 100%;
+      width: 100%;
+    }
+
+    .pixar {
+      max-width: 109px;
+      max-height: 55px;
+      height: 100%;
+      width: 100%;
+    }
+
+    .doordash {
+      max-width: 135px;
+      max-height: 55px;
+      height: 100%;
+      width: 100%;
+    }
+    .amazon {
+      max-width: 90px;
+      max-height: 55px;
+      height: 100%;
+      width: 100%;
+    }
+    .pinterest {
+      max-width: 98px;
+      max-height: 55px;
+      height: 100%;
+      width: 100%;
+    }
+    .uber {
+      max-width: 84px;
+      max-height: 55px;
+      height: 100%;
+      width: 100%;
+    }
+    .plaid {
+      max-width: 82px;
+      max-height: 55px;
+      height: 100%;
+      width: 100%;
+    }
+    .toyota {
+      max-width: 96px;
+      max-height: 55px;
+      height: 100%;
+      width: 100%;
+    }
+    .ibm {
+      max-width: 79px;
+      max-height: 55px;
+      height: 100%;
+      width: 100%;
+    }
+    .snowflake {
+      max-width: 101px;
+      max-height: 55px;
+      height: 100%;
+      width: 100%;
+    }
+    .headspace {
+      max-width: 106px;
+      max-height: 55px;
+      height: 100%;
+      width: 100%;
+    }
+    .angellist {
+      max-width: 104px;
+      max-height: 55px;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
